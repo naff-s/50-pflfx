@@ -597,7 +597,7 @@ print(avg_5(a, b, c, d))
 # def nums_in_rus(nums):
 #     if nums == '0':
 #         answ = 'ноль'
-#     units = ['',"один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять"]
+#     units = ['ноль',"один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять"]
 #     teens = ["десять", "одиннадцать", "двенадцать", "тринадцать", "четырнадцать", 
 #              "пятнадцать", "шестнадцать", "семнадцать", "восемнадцать", "девятнадцать"]
 #     tens = ['', "десять", "двадцать", "тридцать", "сорок", "пятьдесят", 
@@ -606,14 +606,17 @@ print(avg_5(a, b, c, d))
 #                 "пятьсот", "шестьсот", "семьсот", "восемьсот", "девятьсот"]
 #     if len(nums) == 3:
 #         if  int(nums) % 100 == int(nums) % 10:
-#             answ = hundreds[int(int(nums) / 100)] + units[int(nums)%10]
+#             answ = hundreds[int(int(nums) / 100)] + " " + units[int(nums)%10]
 #         else:
-#             answ = hundreds[int(int(nums) / 100)] + tens[int((int(nums) %100) / 10)]+ units[int(nums)%10]
+#             answ = hundreds[int(int(nums) / 100)] + " " +  tens[int((int(nums) %100) / 10)]  +" " + units[int(nums)%10]
 #     elif len(nums) == 2:
 #         if int(int(nums) / 10) != 1:
-#             answ = tens[int(int(nums) /10)]+ teens[int(nums)%10]
-#         else:
-#             answ = teens[int(nums)%10]
+        #     if int(nums) % 10 == 0:
+        #         answ = tens[int(int(nums) /10)]
+        #     else:
+        #         answ = tens[int(int(nums)/10)] + " " + units[int(int(nums) % 10)]
+        # else:
+        #     answ = teens[int(nums)%10]
 #     elif len(nums) == 1:
 #         answ = units[int(nums) % 10]
 #     return answ
@@ -643,3 +646,4 @@ print(avg_5(a, b, c, d))
 # print(lucky_ticket(long))
 
 # 10 и 4 не решены за регистрацию на хакатоне
+
