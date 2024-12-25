@@ -641,3 +641,5 @@ print(avg_5(a, b, c, d))
 #                     continue
 #     return grade 
 # print(lucky_ticket(long))
+
+# 10 и 4 не решены за регистрацию на хакатоне
